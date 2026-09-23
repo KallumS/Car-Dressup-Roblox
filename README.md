@@ -119,9 +119,8 @@ It:
   show-off button.
 
 ```bash
-LUAU=/path/to/luau tests/run.sh
-# optional: also check every property the code writes against Roblox's API dump
-API_DUMP=API-Dump.json LUAU=/path/to/luau tests/run.sh
+tests/setup-tools.sh   # one-off: builds the Luau CLI + luau-lsp, fetches type defs and the API dump
+tests/check.sh         # format check, rojo build, type check, harness and property audit
 ```
 
 ## Ideas for next steps
